@@ -1,4 +1,7 @@
 import os
+import gradio as gr
+
+from gradio_app import create_gradio_app
 
 from fastapi import FastAPI, Request, HTTPException
 from pydantic import BaseModel
@@ -112,5 +115,17 @@ async def google_drive_webhook(
     process_drive_changes()
 
     return {
-        "status": "Drive changes processed"
+        "status": "Drive changes processed"   
     }
+
+# ==========================================
+# Gradio
+# ==========================================
+
+gradio_app = create_gradio_app()
+
+app = gr.mount_gradio_app(
+    app,
+    gradio_app,
+    path="/gradio"
+)
