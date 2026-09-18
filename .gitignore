@@ -1,2 +1,8 @@
 .env
 *.pyc
+.rough.txt
+service_account.json
+DATA/*
+backend/.DS_Store
+.DS_Store
+backend/docker/redis/redis.conf

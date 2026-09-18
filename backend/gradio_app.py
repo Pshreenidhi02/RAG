@@ -1,11 +1,11 @@
 import gradio as gr
 
-from userQuery import user_query
+from userQuery.user_query import ask
 
 
 def chat_with_rag(message, history):
     try:
-        answer = user_query(message)
+        answer = ask(message)
         return answer
 
     except Exception as e:

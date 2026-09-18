@@ -4,7 +4,7 @@ from userQuery.send_to_LLM import send_to_LLM
 
 COLLECTION_NAME = "my_selectiva_collection"
 
-def user_query(query):
+def ask(query):
     print(f"userQuestion is this: {query}")
 
 

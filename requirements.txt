@@ -7,3 +7,5 @@ python-dotenv
 fastapi
 uvicorn
 gradio
+celery
+redis
